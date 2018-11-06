@@ -3,6 +3,7 @@
 Plugin Name: MS-Studio Gallery
 Plugin URI: https://ms-studio.net
 Description: Helper plugin for ACF Gallery
+Version: 2018.11.06
 Author: Manuel Schmalstieg
 Author URI: https://ms-studio.net
 */
@@ -49,7 +50,7 @@ function ms_studio_gallery( $field = 'acf_gallery', $size = 'medium') {
 		
 			foreach ($img_info as $key => $item) {
 
-				return '<img src="'.$item["url-medium"].'" style="width: '.$item["width-medium"].'px; height: '.$item["height-medium"].'px; left: 0px; top: 0px;" class="single-header-img">';
+				return '<img src="'.$item["url-medium"].'" style="width: '.$item["width-medium"].'px; height: '.$item["height-medium"].'px;" class="single-gallery-img">';
 
 			}
 			
@@ -141,6 +142,10 @@ function ms_studio_gallery_toolbox( $img_list = array(), $size = 'thumbnail' ) {
 		
 		$img_mime_types = array("image/jpeg", "image/png", "image/gif");
 		
+		// Illegal string offset 'mime_type'
+		
+		if ( !empty ($image["mime_type"] )) {
+		
 		if (in_array($image["mime_type"], $img_mime_types)) {
 		
 			$img_gallery_array[] = array( 
@@ -165,6 +170,8 @@ function ms_studio_gallery_toolbox( $img_list = array(), $size = 'thumbnail' ) {
 				);
 				
 			} // else: wrong mime type
+			
+		} // else: field empty
 
 	} // end foreach
 
