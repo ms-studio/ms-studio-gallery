@@ -4,7 +4,7 @@
  * Plugin Name: MS-Studio Gallery
  * Plugin URI: https://github.com/ms-studio/ms-studio-gallery/
  * Description: Helper plugin for ACF Gallery
- * Version: 2018.11.06
+ * Version: 1.0.2+build20181106
  * Author: Manuel Schmalstieg
  * Author URI: https://ms-studio.net
  * License: GPL-2.0+
@@ -69,8 +69,10 @@ function ms_studio_gallery( $field = 'acf_gallery', $size = 'medium') {
       }
         
       $img_id_list = implode(",", $img_id_array);
+      
+      // size = Valid values include "thumbnail", "medium", "large", "full" and any other additional image size that was registered
                 
-      return do_shortcode( '[gallery ids="'.$img_id_list.'" loop="true" keyboard="true" link=file width='.$img_width_array[0].']' );
+      return do_shortcode( '[gallery ids="'.$img_id_list.'" loop="true" keyboard="true" link="file" size="'.$size.'"]' );
 
     }
         
