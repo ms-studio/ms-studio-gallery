@@ -23,11 +23,11 @@ As you see in this example, you need to provide two parameters:
 
 ## FAQ
 
-Q: How is the output generated?
+### Q: How is the output generated?
 
 A: The gallery markup is generated via the WordPress "Gallery" Shortcode.
 
-Q: I want to generate the markup myself, is this plugin useful for me?
+### Q: I want to generate the markup myself, is this plugin useful for me?
 
 A: Yes, you can do the following:
 

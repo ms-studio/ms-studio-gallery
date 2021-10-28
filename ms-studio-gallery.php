@@ -148,6 +148,7 @@ function ms_studio_gallery_toolbox( $img_list = array(), $size = 'thumbnail' ) {
       
         $img_gallery_array[] = array( 
           "id" => $image["id"],
+
           "url-custom" => $image["sizes"][$size],
           "width-custom" => $image["sizes"][$size."-width"],
           "height-custom" => $image["sizes"][$size."-height"],
@@ -159,10 +160,15 @@ function ms_studio_gallery_toolbox( $img_list = array(), $size = 'thumbnail' ) {
           "url-large" => $image["sizes"]["large"],
           "width-large" => $image["sizes"]["large-width"],
           "height-large" => $image["sizes"]["large-height"],
+
+          "url-full" => $image["url"],
+          "width-full" => $image["width"],
+          "height-full" => $image["height"],
           
-          "caption" => $image["caption"],
-          "alt" => $image["alt"],
           "title" => $image["title"],
+          "caption" => $image["caption"],
+          "description" => $image["description"],
+          "alt" => $image["alt"],
           // "gallery-title" => $gallery_title,
           // "gallery-descr" => $gallery_description,
         );
