@@ -21,7 +21,7 @@ As you see in this example, you need to provide two parameters:
 - `acf_gallery` is the ACF Field name. Change it according to how you named it in your ACF settings.
 - `medium` is the image size that you want to display. It can be any registered image size, such as  thumbnail (150 x 150), medium (300 x 300), medium_large (768px), large (1024px x 1024px).
 
-## FAQ
+## FAQ
 
 ### Q: How is the output generated?
 
